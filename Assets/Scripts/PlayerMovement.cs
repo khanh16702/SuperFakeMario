@@ -22,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
     public bool jumping { get; private set; }
     public bool running => Mathf.Abs(velocity.x) > 0.25f || Mathf.Abs(inputAxis) > 0.25f;
     public bool sliding => (inputAxis > 0f && velocity.x < 0f) || (inputAxis < 0f && velocity.x > 0f);
+
+    [SerializeField] private AudioSource jumpSoundEffect;
+    [SerializeField] private AudioSource killSoundEffect;
+    
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -61,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         jumping = velocity.y > 0f;
         if (Input.GetButtonDown("Jump"))
         {
+            jumpSoundEffect.Play();
             velocity.y = jumpForce;
             jumping = true;
         }
@@ -90,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (transform.DotTest(collision.transform, Vector2.down))
             {
+                killSoundEffect.Play();
                 velocity.y = jumpForce / 2f + 1f;
                 jumping = true;
             }

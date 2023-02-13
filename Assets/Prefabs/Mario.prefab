@@ -90,6 +90,7 @@ MonoBehaviour:
   smallRenderer: {fileID: 521389526260349029}
   bigRenderer: {fileID: 355532860184502164}
   activeRenderer: {fileID: 0}
+  anNamSoundEffect: {fileID: 0}
 --- !u!114 &7969370878100555080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +108,8 @@ MonoBehaviour:
   maxJumpTime: 1
   grounded: 0
   checkDistanceFactor: 1.6
+  jumpSoundEffect: {fileID: 0}
+  killSoundEffect: {fileID: 0}
 --- !u!114 &5232928183134135444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0b731cde525274e85fd118fc5fab87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
   movement: {fileID: 0}
   idle: {fileID: 21300000, guid: 316669850fc22b947a5ffd08a201559e, type: 3}
   jump: {fileID: 21300000, guid: fe0645aacf16c3c4cab67a8ac2e3bc3a, type: 3}
@@ -359,7 +361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0b731cde525274e85fd118fc5fab87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
   movement: {fileID: 0}
   idle: {fileID: 21300000, guid: 17d0f5a19508c994e86dbee100fa8269, type: 3}
   jump: {fileID: 21300000, guid: 5772f9c35b012a14aac1cbcef7adfcea, type: 3}
