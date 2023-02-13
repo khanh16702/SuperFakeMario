@@ -184,7 +184,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 904eec77acde2574699c0198147e141b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2449386457811611313}
   - component: {fileID: 6767766268816727520}
-  - component: {fileID: 5838396559181742401}
+  - component: {fileID: 6897903461068765666}
   m_Layer: 2
   m_Name: Pipe
   m_TagString: Untagged
@@ -283,7 +283,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &5838396559181742401
+--- !u!114 &6897903461068765666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

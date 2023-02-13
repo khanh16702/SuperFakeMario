@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
     public void AddCoin()
     {
         coins++;
-        if (coins == 100)
+        if (coins == 20)
         {
             AddLife();
             coins = 0;

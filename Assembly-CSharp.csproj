@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D0F74257-F6B2-DCEA-FC51-AA11C694D4B0}</ProjectGuid>
+    <ProjectGuid>{328625FE-9385-17BF-71DF-D7697BD7BF97}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -70,9 +70,10 @@
     <Compile Include="Assets\Scripts\BlockItem.cs" />
     <Compile Include="Assets\Scripts\BlockCoin.cs" />
     <Compile Include="Assets\Scripts\BlockHit.cs" />
+    <Compile Include="Assets\Scripts\Pipe.cs" />
     <Compile Include="Assets\Scripts\Koopa.cs" />
     <Compile Include="Assets\Scripts\Goomba.cs" />
-    <Compile Include="Assets\Scripts\Pipe.cs" />
+    <Compile Include="Assets\Scripts\FlagPole.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
