@@ -9,6 +9,9 @@ public class BlockHit : MonoBehaviour
     public Sprite emptyBlock;
     public int maxHits = -1;
     private bool animating;
+    
+    [SerializeField] private AudioSource blockHitSoundEffect;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -21,6 +24,7 @@ public class BlockHit : MonoBehaviour
     }
     private void Hit()
     {
+        blockHitSoundEffect.Play();
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = true;
         maxHits--;
