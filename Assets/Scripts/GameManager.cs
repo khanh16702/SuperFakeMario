@@ -14,10 +14,6 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set;  }
 
     public int coins { get; private set; }
-    
-    [SerializeField] private AudioSource collectCoinSoundEffect;
-
-    
     public void Awake()
     {
         if (instance != null)
@@ -76,7 +72,6 @@ public class GameManager : MonoBehaviour
     }
     public void AddCoin()
     {
-        collectCoinSoundEffect.Play();
         coins++;
         if (coins == 20)
         {
