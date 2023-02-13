@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\BlockHit.cs" />
     <Compile Include="Assets\Scripts\Koopa.cs" />
     <Compile Include="Assets\Scripts\Goomba.cs" />
+    <Compile Include="Assets\Scripts\Pipe.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
