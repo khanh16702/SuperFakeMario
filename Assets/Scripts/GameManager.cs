@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     {
         collectCoinSoundEffect.Play();
         coins++;
-        if (coins == 100)
+        if (coins == 20)
         {
             AddLife();
             coins = 0;

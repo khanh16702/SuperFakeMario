@@ -24,7 +24,21 @@ public class Pipe : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = false;
         Vector3 enterPosition = transform.position + enterDirection;
         yield return Move(player, enterPosition);
-        
+        yield return new WaitForSeconds(1f);
+
+        bool underground = connection.position.y < 0;
+        Camera.main.GetComponent<SideScrolling>().SetUnderground(underground);
+
+        if (exitDirection != Vector3.zero)
+        {
+            player.position = connection.position - exitDirection;
+            yield return Move(player, connection.position);
+        }
+        else
+        {
+            player.position = connection.position;
+        }
+        player.GetComponent<PlayerMovement>().enabled = true;
     }
     private IEnumerator Move (Transform player, Vector3 endPosition)
     {
