@@ -16,9 +16,6 @@ public class Player : MonoBehaviour
     public bool dead => deadAnimation.enabled;
     public bool starPower { get; private set; }
 
-    [SerializeField] private AudioSource anNamSoundEffect;
-    [SerializeField] private AudioSource deathSoundEffect;
-    
     private void Awake()
     {
         deadAnimation = GetComponent<DeadAnimation>();
@@ -39,18 +36,16 @@ public class Player : MonoBehaviour
 
     public void Grow()
     {
-        anNamSoundEffect.Play();
         smallRenderer.enabled = false;
         bigRenderer.enabled = true;
         activeRenderer = bigRenderer;
         capsuleCollider.size = new Vector2(1f, 2f);
         capsuleCollider.offset = new Vector2(0f, 0.5f);
-        
+
         StartCoroutine(ScaleAnimation());
     }
     private void Shrink()
     {
-        anNamSoundEffect.Play();
         smallRenderer.enabled = true;
         bigRenderer.enabled = false;
         activeRenderer = smallRenderer;
@@ -60,7 +55,6 @@ public class Player : MonoBehaviour
     }
     public void Death()
     {
-        deathSoundEffect.Play();
         smallRenderer.enabled = false;
         bigRenderer.enabled = false;
         deadAnimation.enabled = true;
